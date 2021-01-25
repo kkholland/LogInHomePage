@@ -1,0 +1,195 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+
+/* Universal Styles */
+body, button{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+a{
+    text-decoration: none;
+    color: #5A6175;
+}
+
+.accent-color{
+    color: #F58B44;
+}
+
+
+/* Header / Nav Section */
+
+header{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header img{
+    height: 2em;
+    padding-right: 10px;
+}
+
+.logo-section{
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-top: 5px;
+}
+
+nav li{
+    padding-top: 10px;
+}
+
+/* Offsetting Log In + button by double padding */
+nav li:nth-child(5){
+    padding-top: 20px;
+}
+
+nav button{
+    margin-top: 10px;
+    padding: 8px 10px;
+    background-color: #ffffff;
+    border: 2px solid #F58B44;
+    border-radius: 20px;
+}
+
+/* Main Section */
+
+main{
+    background-image: url("assets/Background-01.jpg");
+    background-size: cover;
+    background-position: right;
+    background-color: #F58B44;
+    height: 90vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #ffffff;
+    padding: 20px;
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    color: #5A6175;
+}
+
+/* Log in Section */
+.log-in-section h1{
+    text-transform: none;
+    font-size: 2.5em;
+    padding: 15px;
+}
+
+.log-in-section span{
+    padding-left: 5px;
+}
+
+
+/* Form Section for email/password */
+form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #BABAC4;
+}
+
+input{
+    height: 30px;
+    border:none;
+    border-bottom: 1px solid #BABAC4;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+input::placeholder{
+    color: #BABAC4;
+    font-size: 1.25em;
+}
+
+#forgot{
+    text-align: right;
+    color: #BABAC4;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.checkbox span{
+    padding-left: 5px;
+    margin-bottom: 12px;
+}
+
+
+/* Button Section */
+.button-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.log-in-button{
+    height: 50px;
+    margin: 8px 0;
+    background-color: #5A6175;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+}
+
+#facebook{
+    background-color: #559AD1;
+}
+
+#spotify{
+    background-color: #39BD59;
+}
+
+
+/* Desktop Styling */
+
+@media only screen and (min-width: 768px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    nav li{
+        padding-left: 20px;
+        padding-top: 0;
+    }
+    
+    nav li:nth-child(5){
+        padding-left: 40px;
+        padding-top: 0;
+    }
+
+    nav button{
+        margin-left: 10px;
+        margin-top: 0;
+    }
+}
