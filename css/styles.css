@@ -1,9 +1,10 @@
 *{
-    margin: 0px;
+    margin: 0;
     padding: 0;
 }
 
 /* Universal Styles */
+
 body, button{
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
@@ -15,18 +16,32 @@ a{
     color: #5A6175;
 }
 
+a:hover{
+    font-weight: bold;
+}
+
 .accent-color{
     color: #F58B44;
 }
 
+body.log-in{
+    background: url("assets/Background-01.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-position: right;
+}
 
 /* Header / Nav Section */
 
 header{
-    margin: 20px;
+    background-color: white;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.app header{
+    border-bottom: 1px solid #F58B44;
 }
 
 header img{
@@ -58,22 +73,27 @@ nav button{
     margin-top: 10px;
     padding: 8px 10px;
     background-color: #ffffff;
-    border: 2px solid #F58B44;
+    border: 2px solid #a07558;
     border-radius: 20px;
 }
 
 /* Main Section */
 
 main{
-    background-image: url("assets/Background-01.jpg");
-    background-size: cover;
-    background-position: right;
-    background-color: #F58B44;
-    height: 90vh;
-    min-height: 600px;
     display: flex;
+}
+
+.log-in main{
+    min-height: 650px;
+}
+
+.centered{
     justify-content: center;
     align-items: center;
+}
+
+.left{
+    justify-content: flex-start;
 }
 
 .container{
@@ -114,6 +134,7 @@ input{
     margin-bottom: 5px;
     padding-left: 5px;
 }
+/* Could use input[type =email and password] to only make them tall without making the input spacing wonky*/
 
 input::placeholder{
     color: #BABAC4;
@@ -144,6 +165,12 @@ input::placeholder{
     margin-top: 10px;
 }
 
+input[type="submit"]{
+    margin-top: 0;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .log-in-button{
     height: 50px;
     margin: 8px 0;
@@ -161,14 +188,49 @@ input::placeholder{
     background-color: #39BD59;
 }
 
+/* App Page Styles <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.menu{
+    height: calc(100vh - 160px);
+    background-color: rgb(40, 41, 66);
+    color: white;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu li{
+    padding-top: 10px;
+}
+
+.menu a{
+    color: white;
+}
+
+.menu a:hover{
+    font-weight: bold;
+}
+
+
 
 /* Desktop Styling */
 
 @media only screen and (min-width: 768px){
     header{
+        height: 30px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    main{
+        height: calc(100vh - 70px);
     }
 
     nav ul{
@@ -191,5 +253,9 @@ input::placeholder{
     nav button{
         margin-left: 10px;
         margin-top: 0;
+    }
+
+    .menu{
+        height: calc(100vh - 110px);
     }
 }

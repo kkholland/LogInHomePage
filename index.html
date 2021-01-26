@@ -3,9 +3,10 @@
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyApp Login</title>
   </head>
-  <body>
+  <body class="log-in">
     <header>
       <div class="logo-section">
         <img src="css/assets/Logo.jpg" />
@@ -22,7 +23,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="centered">
       <div class="container">
         <div class="log-in-section">
           <h1>Log in</h1>
@@ -38,9 +39,10 @@
           </div>
         </form>
         <div class="button-section">
-          <button class="log-in-button">
-              Log in
-          </button>
+          <form action="app.html">
+              <input type="submit" value="Log in" class="log-in-button"/>
+          </form>
+          <!-- Buttons should go in the form area -->
           <span>or</span>
           <button class="log-in-button" id="facebook">
             Log in with Facebook
